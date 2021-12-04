@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 77.0, 1239.0, 810.0 ],
+		"rect" : [ 34.0, 84.0, 1239.0, 795.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,10 +40,35 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"comment" : "The rhythm to play (a list of metrical durations)",
+					"id" : "obj-12",
+					"index" : 2,
+					"maxclass" : "inlet",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 193.0, 20.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"comment" : "the duration of a note when triggered",
+					"id" : "obj-11",
+					"index" : 4,
+					"maxclass" : "outlet",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 338.0, 717.0, 30.0, 30.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"annotation" : "",
 					"comment" : "bang when a note is triggered",
 					"id" : "obj-6",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -56,7 +81,7 @@
 					"annotation" : "",
 					"comment" : "bang when the last note is triggered",
 					"id" : "obj-4",
-					"index" : 0,
+					"index" : 3,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -69,7 +94,7 @@
 					"annotation" : "",
 					"comment" : "The index of a new note in the motif when it is triggered (first note is 1, second is 2, etc)",
 					"id" : "obj-3",
-					"index" : 0,
+					"index" : 2,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -83,11 +108,11 @@
 					"comment" : "A bang to start the rhythmic motif (overwriting it if already playing)",
 					"hint" : "",
 					"id" : "obj-2",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
-					"outlettype" : [ "" ],
+					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 152.5, 20.0, 30.0, 30.0 ]
 				}
 
@@ -311,18 +336,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 0,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 193.0, 79.0, 94.0, 22.0 ],
-					"text" : "r rhythmic_motif"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"fontname" : "Arial Bold",
 					"fontsize" : 10.0,
 					"id" : "obj-16",
@@ -352,13 +365,6 @@
  ],
 		"lines" : [ 			{
 				"patchline" : 				{
-					"destination" : [ "obj-7", 1 ],
-					"source" : [ "obj-1", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
 					"destination" : [ "obj-5", 0 ],
 					"midpoints" : [ 151.5, 573.0, 80.0, 573.0, 80.0, 215.0, 172.5, 215.0 ],
 					"source" : [ "obj-10", 0 ]
@@ -368,7 +374,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-104", 0 ],
-					"midpoints" : [ 251.5, 659.0, 380.0, 659.0, 380.0, 481.0, 207.5, 481.0 ],
+					"midpoints" : [ 251.5, 659.0, 302.0, 659.0, 302.0, 481.0, 207.5, 481.0 ],
 					"order" : 1,
 					"source" : [ "obj-101", 0 ]
 				}
@@ -385,7 +391,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-70", 0 ],
-					"midpoints" : [ 251.5, 670.0, 410.0, 670.0, 410.0, 325.0, 117.0, 325.0 ],
+					"midpoints" : [ 251.5, 670.0, 316.0, 670.0, 316.0, 325.0, 117.0, 325.0 ],
 					"order" : 2,
 					"source" : [ "obj-101", 0 ]
 				}
@@ -395,6 +401,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-56", 0 ],
 					"source" : [ "obj-104", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-7", 1 ],
+					"source" : [ "obj-12", 0 ]
 				}
 
 			}
@@ -451,7 +464,17 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-11", 0 ],
+					"midpoints" : [ 184.5, 294.0, 347.5, 294.0 ],
+					"order" : 0,
+					"source" : [ "obj-19", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-16", 0 ],
+					"order" : 1,
 					"source" : [ "obj-19", 1 ]
 				}
 
@@ -606,8 +629,6 @@
 
 			}
  ],
-		"dependency_cache" : [  ],
-		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "expanse",
 				"default" : 				{
