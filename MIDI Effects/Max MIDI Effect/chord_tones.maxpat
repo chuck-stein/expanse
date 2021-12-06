@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 59.0, 107.0, 640.0, 480.0 ],
+		"rect" : [ 682.0, 131.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -54,7 +54,7 @@
 				"box" : 				{
 					"comment" : "The current list of chord tones as MIDI note numbers",
 					"id" : "obj-24",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -243,7 +243,9 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-55", 0 ],
-					"source" : [ "obj-2", 0 ]
+					"source" : [ "obj-2", 0 ],
+					"watchpoint_flags" : 5,
+					"watchpoint_id" : 11
 				}
 
 			}
@@ -333,15 +335,13 @@
 
 			}
  ],
-		"dependency_cache" : [  ],
-		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "expanse",
 				"default" : 				{
-					"stripecolor" : [ 0.831372549019608, 0.792156862745098, 0.658823529411765, 1.0 ],
-					"fontsize" : [ 10.0 ],
+					"locked_bgcolor" : [ 0.831372549019608, 0.792156862745098, 0.658823529411765, 1.0 ],
 					"fontname" : [ "Arial Bold" ],
-					"locked_bgcolor" : [ 0.831372549019608, 0.792156862745098, 0.658823529411765, 1.0 ]
+					"stripecolor" : [ 0.831372549019608, 0.792156862745098, 0.658823529411765, 1.0 ],
+					"fontsize" : [ 10.0 ]
 				}
 ,
 				"parentstyle" : "",
